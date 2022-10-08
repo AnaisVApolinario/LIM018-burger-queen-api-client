@@ -1,0 +1,146 @@
+{
+  "auth": [
+    {
+      "id": "01",
+      "email": "pame@gmail.com",
+      "password": "123456",
+      "roles": "waitress"
+    },
+    {
+      "id": "dYPShn7"
+    },
+    {
+      "id": "xSqaBUk"
+    },
+    {
+      "id": "ixt_mEX"
+    },
+    {
+      "id": "IXJLW8d"
+    },
+    {
+      "id": "MnqSKFM"
+    },
+    {
+      "id": "-JIOeZX"
+    },
+    {
+      "id": "yNJBCWR"
+    },
+    {
+      "id": "NoVLiEe"
+    },
+    {
+      "id": "VSvVCPf"
+    },
+    {
+      "id": "d_4JEcV"
+    },
+    {
+      "id": "lUjBsG6"
+    },
+    {
+      "id": "BdEygfx"
+    },
+    {
+      "id": "h1hK-Nb"
+    },
+    {
+      "id": "dZDNHhp"
+    },
+    {
+      "id": "6lj7Bgf"
+    }
+  ],
+  "products": [
+    {
+      "id": "01",
+      "name": "Cafe Americano",
+      "price": 5,
+      "image": "",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "id": "02",
+      "name": "Cafe con Leche",
+      "price": 7,
+      "image": "",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "id": "03",
+      "name": "Jugo Natural",
+      "price": 7,
+      "image": "",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "id": "04",
+      "name": "sandwich de Queso",
+      "price": 10,
+      "image": "",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "id": "05",
+      "name": "Agua 500 ml",
+      "price": 5,
+      "image": "",
+      "type": "bebidas",
+      "dateEntry": ""
+    },
+    {
+      "id": "06",
+      "name": "Agua 750 ml",
+      "price": 7,
+      "image": "",
+      "type": "desayuno",
+      "dateEntry": ""
+    },
+    {
+      "id": "07",
+      "name": "Gaseosa 500 ml",
+      "price": 7,
+      "image": "",
+      "type": "almuerzo",
+      "dateEntry": ""
+    },
+    {
+      "id": "08",
+      "name": "Soda 750 ml",
+      "price": 10,
+      "image": "",
+      "type": "almuerzo",
+      "dateEntry": ""
+    },
+    {
+      "id": "09",
+      "name": "Hamburguesa Clasica",
+      "price": 10,
+      "image": "",
+      "type": "almuerzo",
+      "dateEntry": ""
+    },
+    {
+      "id": "10",
+      "name": "Hamburguesa Doble",
+      "price": 15,
+      "image": "",
+      "type": "almuerzo",
+      "dateEntry": ""
+    },
+    {
+      "id": "11",
+      "name": "Papas Fritas",
+      "price": 5,
+      "image": "",
+      "type": "almuerzo",
+      "dateEntry": "",
+      "menu": ""
+    }
+  ]
+}
