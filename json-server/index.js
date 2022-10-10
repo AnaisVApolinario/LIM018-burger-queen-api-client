@@ -13,9 +13,9 @@ server.use((req, res, next) => {
   console.log(req.headers);
 
 
-  if(req.method === "POST" && req.path === "/auth") {
+  if(req.method === "GET" && req.path === "/algo") {
     console.log("hola")
-   next();
+   res('Bienvenido');
   } else if(req.headers.authorization === `Bearer ${secret}`) {
     console.log(req.headers.authorization)
   next()
