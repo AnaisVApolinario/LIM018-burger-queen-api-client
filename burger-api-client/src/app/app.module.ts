@@ -7,6 +7,7 @@ import { LoginComponent } from './view/login/login.component';
 import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { WaiterComponent } from './view/waiter/waiter.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

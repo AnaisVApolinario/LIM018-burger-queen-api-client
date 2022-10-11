@@ -1,13 +1,4 @@
 {
-  "auth": [
-    {
-      "id": "01",
-      "email": "pame@gmail.com",
-      "password": "123456",
-      "roles": "waitress"
-    }
-   
-  ],
   "products": [
     {
       "id": "01",

@@ -12,18 +12,17 @@ server.use((req, res, next) => {
 
   console.log(req.headers);
 
-
-  if(req.method === "POST" && req.path === "/auth") {
+  if (req.method === "POST" && req.path === "/auth") {
     console.log("hola")
-   next();
-  } else if(req.headers.authorization === `Bearer ${secret}`) {
+    next();
+  } else if (req.headers.authorization === `Bearer ${secret}`) {
     console.log(req.headers.authorization)
-  next()
+    next()
   } else {
     console.log("adios")
-  res.sendStatus(401)
+    res.sendStatus(401)
   }
- })
+})
 
 
 server.post('/auth', (req, res) => {
@@ -38,6 +37,7 @@ server.post('/auth', (req, res) => {
 })
 
 server.use(router)
+
 server.listen(3000, () => {
   console.log('JSON Server is running')
 })
