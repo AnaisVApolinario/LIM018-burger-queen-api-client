@@ -5,8 +5,9 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './waiter.component.html',
   styleUrls: ['./waiter.component.css']
 })
-export class WaiterComponent implements OnInit {
 
+export class WaiterComponent implements OnInit {
+  cliente!: String;
   constructor() { }
 
   ngOnInit(): void {

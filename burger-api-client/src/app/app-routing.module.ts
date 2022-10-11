@@ -6,10 +6,12 @@ import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },
   { path: 'waiter', component: WaiterComponent },
   { path: 'chef', component: ChefComponent },
-  { path: 'managed', component: ManagedComponent }];
+  { path: 'managed', component: ManagedComponent },
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
