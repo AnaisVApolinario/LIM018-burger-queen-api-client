@@ -10,7 +10,11 @@ import { WaiterComponent } from './view/waiter/waiter.component';
 import { FormsModule } from '@angular/forms';
 
 // Componentes
-import { NavegacionComponent } from './components/navegacion.component';
+import { NavegacionComponent } from './view/waiter/components/navegacion.component';
+import { NombresComponent } from './view/waiter/nombres/nombres.component';
+import { DesayunoComponent } from './view/waiter/desayuno/desayuno.component';
+import { AlmuerzoComponent } from './view/waiter/almuerzo/almuerzo.component';
+import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +23,11 @@ import { NavegacionComponent } from './components/navegacion.component';
     ChefComponent,
     ManagedComponent,
     WaiterComponent,
-    NavegacionComponent
+    NavegacionComponent,
+    NombresComponent,
+    DesayunoComponent,
+    AlmuerzoComponent,
+    CajaPedidosComponent
   ],
   imports: [
     BrowserModule,

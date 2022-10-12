@@ -70,7 +70,7 @@
     <section class="des-tablero">
     </section>
   </section>
-  <!-- <section class="cena-products">
+   <section class="cena-products">
     <div class="cena-items">
       <img src="" alt="Hamburguesa Simple">
       <p>Hamburguesa Simple</p>
