@@ -10,10 +10,9 @@ import { WaiterComponent } from './view/waiter/waiter.component';
 import { FormsModule } from '@angular/forms';
 
 // Componentes
-import { NavegacionComponent } from './view/waiter/components/navegacion.component';
+import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
 import { NombresComponent } from './view/waiter/nombres/nombres.component';
-import { DesayunoComponent } from './view/waiter/desayuno/desayuno.component';
-import { AlmuerzoComponent } from './view/waiter/almuerzo/almuerzo.component';
+import { AlmuerzoComponent } from './view/waiter/menu/almuerzo.component';
 import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
 
 @NgModule({
@@ -25,7 +24,6 @@ import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.co
     WaiterComponent,
     NavegacionComponent,
     NombresComponent,
-    DesayunoComponent,
     AlmuerzoComponent,
     CajaPedidosComponent
   ],
