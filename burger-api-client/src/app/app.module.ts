@@ -7,7 +7,10 @@ import { LoginComponent } from './view/login/login.component';
 import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
-import { FormsModule } from '@angular/forms'
+import { FormsModule } from '@angular/forms';
+
+// Componentes
+import { NavegacionComponent } from './components/navegacion.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +18,8 @@ import { FormsModule } from '@angular/forms'
     LoginComponent,
     ChefComponent,
     ManagedComponent,
-    WaiterComponent
+    WaiterComponent,
+    NavegacionComponent
   ],
   imports: [
     BrowserModule,

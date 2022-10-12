@@ -11,6 +11,7 @@ export class WaiterComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+
   }
 
 }

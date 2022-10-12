@@ -1,9 +1,7 @@
-/* font-family: 'Dancing Script', cursive; */
-
-/* .header-waiter {
+.header-waiter {
   display: flex;
   justify-content: center;
-  background-color: #000;
+  background-color: #000; /* Color de la barra de navegacion */
 }
 
 .container-waiter{
@@ -86,4 +84,4 @@
   .desktop {
     display: block;
   }
-} */
+}
