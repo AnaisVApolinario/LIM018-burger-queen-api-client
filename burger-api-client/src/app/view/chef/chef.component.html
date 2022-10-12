@@ -1,1 +1,33 @@
-<p>chef works!</p>
+<body>
+  <header class="header-chef">
+    <img src="./assets/logoDerecho.png" alt="logo" />
+    <button>CERRAR SESION</button>
+  </header>
+  <main>
+    <section class="hora-pedidoRecibido">
+      <p>Hora de Pedido Recibido: 00:00</p>
+    </section>
+    <section class="tablero">
+      <section class="superior">
+        <section class="datos">
+          <p id="cliente">Maria Perales</p>
+          <p id="mesero">Julio Ramirez</p>
+        </section>
+        <section class="intermedio">
+          <p>Cafe americano</p>
+          <p>1</p>
+          <section class="hecho">
+            <app-boton-hecho></app-boton-hecho>
+            <app-boton-hecho></app-boton-hecho>
+            <app-boton-hecho></app-boton-hecho>
+            <app-boton-hecho></app-boton-hecho>
+          </section>
+        </section>
+      </section>
+      <section class="inferior">
+        <p>Hora de Pedido entregado: 00:00</p>
+        <button class="btn-terminado">TERMINADO</button>
+      </section>
+    </section>
+  </main>
+</body>
