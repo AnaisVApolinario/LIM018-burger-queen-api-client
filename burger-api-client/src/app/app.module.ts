@@ -10,6 +10,12 @@ import { WaiterComponent } from './view/waiter/waiter.component';
 import { FormsModule } from '@angular/forms';
 import { BotonHechoComponent } from './view/chef/boton-hecho/boton-hecho.component'
 
+// Componentes
+import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
+import { NombresComponent } from './view/waiter/nombres/nombres.component';
+import { AlmuerzoComponent } from './view/waiter/menu/almuerzo.component';
+import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +23,11 @@ import { BotonHechoComponent } from './view/chef/boton-hecho/boton-hecho.compone
     ChefComponent,
     ManagedComponent,
     WaiterComponent,
-    BotonHechoComponent
+    BotonHechoComponent,
+    NavegacionComponent,
+    NombresComponent,
+    AlmuerzoComponent,
+    CajaPedidosComponent
   ],
   imports: [
     BrowserModule,
