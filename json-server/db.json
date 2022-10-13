@@ -4,7 +4,7 @@
       "id": "01",
       "name": "Cafe Americano",
       "price": 5,
-      "image": "",
+      "image": "https://images.milenio.com/timfnOanH03iBfMT5u48okXXbPU=/958x596/uploads/media/2019/10/01/cafe-americano-shutterstock_0_1_958_596.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -88,6 +88,29 @@
       "type": "almuerzo",
       "dateEntry": "",
       "menu": ""
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": "",
+      "table": "2",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 1
+        }
+      ],
+      "status": "",
+      "dateEntry": "",
+      "dateProcessed": "",
+      "time": ""
     }
   ]
 }

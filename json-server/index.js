@@ -33,6 +33,7 @@ server.post('/auth', (req, res) => {
     res.jsonp({
       token: secret
     })
+    res.status(200).json(datos);
   } else res.status(400).send('Bad Request')
 })
 
