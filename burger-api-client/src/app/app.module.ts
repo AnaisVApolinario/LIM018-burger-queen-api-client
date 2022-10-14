@@ -7,7 +7,8 @@ import { LoginComponent } from './view/login/login.component';
 import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
-import { FormsModule } from '@angular/forms'
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,9 @@ import { FormsModule } from '@angular/forms'
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-//import axios from 'axios';
+///import { from } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 //import { auth } from '../services/api';
+import { ApiService } from 'src/services/api';
+import { LoginI } from 'src/app/modelos/login.interface';
 
 const baseUrl: string = "http://localhost:3000/auth";
 
@@ -13,20 +15,27 @@ const baseUrl: string = "http://localhost:3000/auth";
 
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    usuario: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
+    usuario : new FormControl('', Validators.required),
+    password : new FormControl('', Validators.required)
   })
 
-  constructor() { }
+  constructor(private api:ApiService) { }
 
   ngOnInit(): void {
-    //console.log('AXIOS', axios.get(baseUrl));
+
   }
 
-  onLogin(form: any) {
-
-    console.log(form)
+  onLogin(form: LoginI){
+    this.api.loginByEmail(form).subscribe(data =>{
+      console.log(data);
+    })
+    
   }
+
+
+}
+
+
 
 
   // export class LoginComponent implements OnInit {
@@ -39,7 +48,7 @@ export class LoginComponent implements OnInit {
 
 
 
-}
+
 
 
 // export class LoginComponent {
