@@ -1,8 +1,8 @@
 <section class="cena-products">
   <div *ngFor="let item of products" class="cena-items">
-    <img src="" alt="Hamburguesa Simple">
-    <p>{{item.name}}</p>
-    <p>$/.{{item.price}}</p>
+    <img [src]="item.image" alt="">
+    <p>Precio{{item.name}}</p>
+    <!-- <p>$/.{{item.price}}</p> -->
     <p></p>
   </div>
 

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Products, DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-almuerzo',
@@ -6,20 +7,16 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./almuerzo.component.css']
 })
 export class AlmuerzoComponent implements OnInit {
-  products = [{
-    "id": "01",
-    "name": "Cafe Americano",
-    "price": 5,
-    "image": "",
-    "type": "desayuno",
-    "dateEntry": ""
-  }
-];
+  products: Products[] = [];
 
-  constructor() { }
+  constructor( private readonly dataSVc: DataService) { }
 
   ngOnInit(): void {
     //actulizar datos de verdad aquí
+    this.dataSVc.getProducts()
+    .subscribe( items => { //response
+      this.products = [...items];
+    });
   }
 
 }
