@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -8,6 +9,7 @@ import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
 import { FormsModule } from '@angular/forms';
+import { BotonHechoComponent } from './view/chef/boton-hecho/boton-hecho.component'
 
 // Componentes
 import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
@@ -22,6 +24,7 @@ import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.co
     ChefComponent,
     ManagedComponent,
     WaiterComponent,
+    BotonHechoComponent,
     NavegacionComponent,
     NombresComponent,
     AlmuerzoComponent,
@@ -31,6 +34,7 @@ import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.co
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
