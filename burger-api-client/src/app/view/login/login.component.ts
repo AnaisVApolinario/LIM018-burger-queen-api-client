@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import axios from 'axios';
 // import { auth } from '../services/api';
 
-const baseUrl:string = "http://localhost:3000/auth";
+const baseUrl:string = "http://localhost:3000/users";
 
 @Component({
   selector: 'app-login',

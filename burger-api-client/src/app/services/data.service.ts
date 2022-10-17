@@ -36,12 +36,12 @@ private readonly API = environment.api;
     let direccion =this.API + "auth"
     return this.http.get<Products[]>(direccion)
    }
-  updateCity(city: Products): Observable<void> { 
+  updateCity(city: Products): Observable<void> {
     const body = {name:city.name};
     let direccion =this.API + "auth"
     return this.http.put<void>(`${direccion}/${city._id}`, body)
   }
-  deleteCity(id: string): Observable<void> { 
+  deleteCity(id: string): Observable<void> {
     let direccion =this.API + "auth"
     return this.http.delete<void>(`${direccion}/${id}`);
   }
