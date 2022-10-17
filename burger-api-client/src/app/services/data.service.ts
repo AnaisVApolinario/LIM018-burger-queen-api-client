@@ -28,11 +28,12 @@ export class DataService {
   
 
 private readonly API = environment.api;
+private url: string = 'http://localhost:3000';
   constructor(private readonly http:HttpClient) { }
 
 
   loginByEmail(form: LoginI): Observable<ResponseI> {
-      let direccion = this.API+ "auth";
+      let direccion = this.url + "/auth";
       return this.http.post<ResponseI>(direccion, { email: form.email, password: form.password });
   }
 
@@ -43,7 +44,7 @@ private readonly API = environment.api;
   //   return this.http.post<Products>(direccion, body);
   //  }
   getProducts(): Observable<Products[]> {
-    let direccion =this.API + "auth"
+    let direccion =this.API + "products"
     return this.http.get<Products[]>(direccion)
    }
   updateCity(city: Products): Observable<void> { 
