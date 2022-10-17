@@ -1,13 +1,19 @@
 <body>
   <div class="login-container">
-    <h1>LOGIN</h1>
-    <!-- <form class="form-container"> -->
-      <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" class="form-container">
+    <div class="img-login">
+      <img src="assets/logoarco.png" alt="logoarco">
+    </div>
 
-      <input type="email" id="email" class="form-login" placeholder="Correo" formControlName = "usuario">
-      <input type="password" id="password" class="form-login" placeholder="Contraseña" formControlName ="password">
+    <!-- <form class="form-container"> -->
+    <form [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)" class="form-container">
+      <!-- <h1>LOGIN</h1> -->
+      <input type="text" id="email" class="form-login" placeholder="Correo" formControlName="email">
+      <input type="password" id="password" class="form-login" placeholder="Contraseña" formControlName="password">
+      <p class="error" *ngIf="errorStatus">{{errorMsj}}</p>
       <button type="submit" class="btnLogin">Ingresar</button>
-      <!-- <button (click)= "enviar($event)" routerLink = "/waiter" class="btnLogin">Ingresar</button> -->
+    
     </form>
+   
+
   </div>
 </body>

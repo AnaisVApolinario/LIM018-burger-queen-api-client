@@ -1,11 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-///import { from } from 'rxjs';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-//import { auth } from '../services/api';
 import { ApiService } from 'src/services/api';
 import { LoginI } from 'src/app/modelos/login.interface';
+import { ResponseI } from 'src/app/modelos/response.interface';
 
-const baseUrl: string = "http://localhost:3000/auth";
+import { Router } from '@angular/router';
+
+const baseUrl: string = "http://localhost:3000";
 
 @Component({
   selector: 'app-login',
@@ -15,44 +16,42 @@ const baseUrl: string = "http://localhost:3000/auth";
 
 export class LoginComponent implements OnInit {
   loginForm = new FormGroup({
-    usuario : new FormControl('', Validators.required),
-    password : new FormControl('', Validators.required)
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
   })
 
-  constructor(private api:ApiService) { }
+  constructor(private api: ApiService, private router:Router) { }
 
+  errorStatus: boolean = true;
+  errorMsj:string = '';
+  errorcode:string = '';
   ngOnInit(): void {
 
   }
 
-  onLogin(form: LoginI){
-    this.api.loginByEmail(form).subscribe(data =>{
-      console.log(data);
+  onLogin(form: LoginI) {
+    this.api.loginByEmail(form).subscribe(data => {
+      let dataResponse:ResponseI = data;
+
+      console.log(dataResponse)
+      if (dataResponse) {
+        
+        localStorage.setItem("token",dataResponse.token);
+        this.router.navigate(['/waiter']); 
+        
+      }else{
+      if (this.errorcode == 'auth/missing-email'){
+          this.errorStatus = true
+          this.errorMsj = 'Debe ingresar un usuario y contraseña'
+        }
+      }
+      console.log('adios')
     })
-    
+
   }
-
-
 }
 
 
 
 
-  // export class LoginComponent implements OnInit {
-  //   enviar(event: Event): void {
-  //     event.preventDefault();
-  //     console.log('Event ->', event)
-  //     console.log('Otra pagina')
-  //   }
-  //   // constructor() { }
-
-
-
-
-
-
-// export class LoginComponent {
-//   enviar(event: Event): void {
-//     console.log('Event ->', event)
-//   }
-// }
+  

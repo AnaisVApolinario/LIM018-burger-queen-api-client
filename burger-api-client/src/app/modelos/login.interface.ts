@@ -1,4 +1,5 @@
 export interface LoginI{
-    usuario?: string | null | undefined;
+    email?: string | null | undefined;
     password?: string | null | undefined;
 }
+
