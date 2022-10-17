@@ -26,7 +26,7 @@ server.use((req, res, next) => {
 
 
 server.post('/auth', (req, res) => {
-
+console.log("holaa", req.body)
   if (
     req.body.email === 'pame@gmail.com' &&
     req.body.password === '123456') {

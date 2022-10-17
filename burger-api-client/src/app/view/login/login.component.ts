@@ -1,8 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import axios from 'axios';
-// import { auth } from '../services/api';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { DataService } from 'src/app/services/data.service';
+import { LoginI } from 'src/app/modelos/login.interface';
+import { ResponseI } from 'src/app/modelos/response.interface';
 
-const baseUrl:string = "http://localhost:3000/users";
+import { Router } from '@angular/router';
+
+
 
 @Component({
   selector: 'app-login',
@@ -10,24 +14,44 @@ const baseUrl:string = "http://localhost:3000/users";
   styleUrls: ['./login.component.css']
 })
 
-
 export class LoginComponent implements OnInit {
-  enviar(event: Event): void {
-    event.preventDefault();
-    console.log('Event ->', event)
-    console.log('Otra pagina')
-  }
-  // constructor() { }
+  loginForm = new FormGroup({
+    email: new FormControl('', Validators.required),
+    password: new FormControl('', Validators.required)
+  })
 
+  constructor(private api: DataService, private router: Router) { }
+
+  errorStatus: boolean = true;
+  errorMsj: string = '';
+  errorcode: string = '';
   ngOnInit(): void {
-    console.log('AXIOS',axios.get(baseUrl));
+
   }
 
+  onLogin(form: LoginI) {
+    this.api.loginByEmail(form).subscribe(data => {
+      let dataResponse: ResponseI = data;
+
+      console.log('data', dataResponse)
+      if (dataResponse) {
+
+        localStorage.setItem("token", dataResponse.token);
+        this.router.navigate(['/waiter']);
+
+      } else {
+
+        if (this.errorcode == 'auth/missing-email') {
+          this.errorStatus = true
+          this.errorMsj = 'Debe ingresar un usuario y contraseña'
+        }
+
+      }
+      console.log('adios')
+    })
+
+  }
 }
 
 
-// export class LoginComponent {
-//   enviar(event: Event): void {
-//     console.log('Event ->', event)
-//   }
-// }
+
