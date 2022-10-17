@@ -5,6 +5,7 @@ import { LoginComponent } from './view/login/login.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
 
+
 const routes: Routes = [
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: 'login', component: LoginComponent },

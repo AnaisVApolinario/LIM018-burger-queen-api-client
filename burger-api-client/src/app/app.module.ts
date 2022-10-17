@@ -7,13 +7,15 @@ import { LoginComponent } from './view/login/login.component';
 import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
-import { FormsModule } from '@angular/forms';
+
 
 // Componentes
 import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
 import { NombresComponent } from './view/waiter/nombres/nombres.component';
 import { AlmuerzoComponent } from './view/waiter/menu/almuerzo.component';
 import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.co
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ReactiveFormsModule,
     FormsModule,
+    HttpClientModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

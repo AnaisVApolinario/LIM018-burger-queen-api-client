@@ -1,4 +1,10 @@
 {
+  "auth": [
+    {
+      "email": "pame@gmail.com",
+      "password": "123456"
+    }
+  ],
   "products": [
     {
       "id": "01",
