@@ -10,7 +10,7 @@
       "id": "01",
       "name": "Cafe Americano",
       "price": 5,
-      "image": "",
+      "image": "./assets/americano.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -18,7 +18,7 @@
       "id": "02",
       "name": "Cafe con Leche",
       "price": 7,
-      "image": "",
+      "image": "./assets/cafeLeche.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -26,7 +26,7 @@
       "id": "03",
       "name": "Jugo Natural",
       "price": 7,
-      "image": "",
+      "image": "./assets/jugoNatural.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -34,7 +34,7 @@
       "id": "04",
       "name": "sandwich de Queso",
       "price": 10,
-      "image": "",
+      "image": "./assets/jamonQueso.jpeg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -42,7 +42,7 @@
       "id": "05",
       "name": "Agua 500 ml",
       "price": 5,
-      "image": "",
+      "image": "./assets/aguaMineral.jpg",
       "type": "bebidas",
       "dateEntry": ""
     },
@@ -50,7 +50,7 @@
       "id": "06",
       "name": "Agua 750 ml",
       "price": 7,
-      "image": "",
+      "image": "./assets/aguaCielo750ml.png",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -58,7 +58,7 @@
       "id": "07",
       "name": "Gaseosa 500 ml",
       "price": 7,
-      "image": "",
+      "image": "./assets/coca.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -66,7 +66,7 @@
       "id": "08",
       "name": "Soda 750 ml",
       "price": 10,
-      "image": "",
+      "image": "./assets/pespi750ml.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -74,7 +74,7 @@
       "id": "09",
       "name": "Hamburguesa Clasica",
       "price": 10,
-      "image": "",
+      "image": "./assets/simple.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -82,7 +82,7 @@
       "id": "10",
       "name": "Hamburguesa Doble",
       "price": 15,
-      "image": "",
+      "image": "/assets/doble.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -90,10 +90,55 @@
       "id": "11",
       "name": "Papas Fritas",
       "price": 5,
-      "image": "",
+      "image": "./assets/papas-fritas.jpg",
       "type": "almuerzo",
       "dateEntry": "",
       "menu": ""
+    }
+  ],
+  "orders": [
+    {
+      "id": 1,
+      "userId": "",
+      "table": "2",
+      "products": [
+        {
+          "product": "American Coffee",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "product": "Coffee with milk",
+          "price": 7,
+          "qty": 1
+        }
+      ],
+      "status": "",
+      "dateEntry": "",
+      "dateProcessed": "",
+      "time": ""
+    }
+  ], "users": [
+    {
+      "id":"1",
+      "nombre": "Maria Pereda",
+      "email": "mariaP@gmail.com",
+      "password":"123456",
+      "rol":"waiter"
+    },
+    {
+      "id":"2",
+      "nombre": "Juan Ferrer",
+      "email": "juanF@gmail.com",
+      "password":"123456",
+      "rol":"waiter"
+    },
+    {
+      "id":"3",
+      "nombre": "Piero Sanchez",
+      "email": "pieroS@gmail.com",
+      "password":"123456",
+      "rol":"chef"
     }
   ]
 }

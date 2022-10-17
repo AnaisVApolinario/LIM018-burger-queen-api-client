@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -7,7 +8,7 @@ import { LoginComponent } from './view/login/login.component';
 import { ChefComponent } from './view/chef/chef.component';
 import { ManagedComponent } from './view/managed/managed.component';
 import { WaiterComponent } from './view/waiter/waiter.component';
-
+import { BotonHechoComponent } from './view/chef/boton-hecho/boton-hecho.component'
 
 // Componentes
 import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
@@ -15,7 +16,7 @@ import { NombresComponent } from './view/waiter/nombres/nombres.component';
 import { AlmuerzoComponent } from './view/waiter/menu/almuerzo.component';
 import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
-import { HttpClientModule } from '@angular/common/http';
+
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { HttpClientModule } from '@angular/common/http';
     ChefComponent,
     ManagedComponent,
     WaiterComponent,
+    BotonHechoComponent,
     NavegacionComponent,
     NombresComponent,
     AlmuerzoComponent,
@@ -34,7 +36,7 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule 
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

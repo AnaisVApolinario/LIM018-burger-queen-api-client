@@ -1,1 +1,29 @@
-<p>managed works!</p>
+<app-navegacion></app-navegacion>
+<section class="container">
+  <h3>Lista de Empleados</h3>
+  <button class="agregar">Nuevo Empleado</button>
+  <table class="table table-dark">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Email</th>
+        <th scope="col">Contraseña</th>
+        <th scope="col">Rol</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let empleado of empleados">
+        <th>{{empleado.id}}</th>
+        <!-- <td>{{empleado.empleadoId}}</td> -->
+        <td>{{empleado.nombre}}</td>
+        <td>{{empleado.email}}</td>
+        <td>{{empleado.password}}</td>
+        <td>{{empleado.rol}}</td>
+  
+      </tr>
+    </tbody>
+  </table>
+
+</section>
