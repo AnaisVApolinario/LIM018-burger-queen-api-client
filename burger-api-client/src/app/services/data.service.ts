@@ -11,6 +11,13 @@ export interface Products {
   type: string;
   dateEntry: any;
 }
+export interface ListaEmpleadosI{
+  id: string;
+  nombre: string;
+  email: string;
+  password:string;
+  rol:string;
+}
 
 @Injectable({
   providedIn: 'root'
@@ -22,16 +29,25 @@ private readonly API = environment.api;
 
   addNewCity(city:string): Observable<Products> {
     const body = {name: city};
-    return this.http.post<Products>(this.API, body);
+    let direccion =this.API + "auth"
+    return this.http.post<Products>(direccion, body);
    }
   getProducts(): Observable<Products[]> {
-    return this.http.get<Products[]>(this.API)
+    let direccion =this.API + "auth"
+    return this.http.get<Products[]>(direccion)
    }
   updateCity(city: Products): Observable<void> { 
     const body = {name:city.name};
-    return this.http.put<void>(`${this.API}/${city._id}`, body)
+    let direccion =this.API + "auth"
+    return this.http.put<void>(`${direccion}/${city._id}`, body)
   }
   deleteCity(id: string): Observable<void> { 
-    return this.http.delete<void>(`${this.API}/${id}`);
+    let direccion =this.API + "auth"
+    return this.http.delete<void>(`${direccion}/${id}`);
+  }
+
+  getAllEmpleados():Observable<ListaEmpleadosI[]>{
+    let direccion =this.API + "users"
+    return this.http.get<ListaEmpleadosI[]>(direccion);
   }
 }
