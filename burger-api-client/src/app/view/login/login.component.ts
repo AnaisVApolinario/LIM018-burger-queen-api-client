@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { ApiService } from 'src/services/data.service';
+import { DataService } from 'src/app/services/data.service';
 import { LoginI } from 'src/app/modelos/login.interface';
 import { ResponseI } from 'src/app/modelos/response.interface';
 
 import { Router } from '@angular/router';
 
-const baseUrl: string = "http://localhost:3000";
+
 
 @Component({
   selector: 'app-login',
@@ -20,30 +20,32 @@ export class LoginComponent implements OnInit {
     password: new FormControl('', Validators.required)
   })
 
-  constructor(private api: ApiService, private router:Router) { }
+  constructor(private api: DataService, private router: Router) { }
 
   errorStatus: boolean = true;
-  errorMsj:string = '';
-  errorcode:string = '';
+  errorMsj: string = '';
+  errorcode: string = '';
   ngOnInit(): void {
 
   }
 
   onLogin(form: LoginI) {
     this.api.loginByEmail(form).subscribe(data => {
-      let dataResponse:ResponseI = data;
+      let dataResponse: ResponseI = data;
 
-      console.log(dataResponse)
+      console.log('data', dataResponse)
       if (dataResponse) {
-        
-        localStorage.setItem("token",dataResponse.token);
-        this.router.navigate(['/waiter']); 
-        
-      }else{
-      if (this.errorcode == 'auth/missing-email'){
+
+        localStorage.setItem("token", dataResponse.token);
+        this.router.navigate(['/waiter']);
+
+      } else {
+
+        if (this.errorcode == 'auth/missing-email') {
           this.errorStatus = true
           this.errorMsj = 'Debe ingresar un usuario y contraseña'
         }
+      
       }
       console.log('adios')
     })
@@ -53,5 +55,3 @@ export class LoginComponent implements OnInit {
 
 
 
-
-  

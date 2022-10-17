@@ -37,11 +37,11 @@ private readonly API = environment.api;
   }
 
 
-  addNewCity(city:string): Observable<Products> {
-    const body = {name: city};
-    let direccion =this.API + "auth"
-    return this.http.post<Products>(direccion, body);
-   }
+  // addNewCity(city:string): Observable<Products> {
+  //   const body = {name: city};
+  //   let direccion =this.API + "auth"
+  //   return this.http.post<Products>(direccion, body);
+  //  }
   getProducts(): Observable<Products[]> {
     let direccion =this.API + "auth"
     return this.http.get<Products[]>(direccion)
