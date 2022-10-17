@@ -4,7 +4,7 @@
       "id": "01",
       "name": "Cafe Americano",
       "price": 5,
-      "image": "https://images.milenio.com/timfnOanH03iBfMT5u48okXXbPU=/958x596/uploads/media/2019/10/01/cafe-americano-shutterstock_0_1_958_596.jpg",
+      "image": "./assets/americano.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -12,7 +12,7 @@
       "id": "02",
       "name": "Cafe con Leche",
       "price": 7,
-      "image": "",
+      "image": "./assets/cafeLeche.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -20,7 +20,7 @@
       "id": "03",
       "name": "Jugo Natural",
       "price": 7,
-      "image": "",
+      "image": "./assets/jugoNatural.jpg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -28,7 +28,7 @@
       "id": "04",
       "name": "sandwich de Queso",
       "price": 10,
-      "image": "",
+      "image": "./assets/jamonQueso.jpeg",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -36,7 +36,7 @@
       "id": "05",
       "name": "Agua 500 ml",
       "price": 5,
-      "image": "",
+      "image": "./assets/aguaMineral.jpg",
       "type": "bebidas",
       "dateEntry": ""
     },
@@ -44,7 +44,7 @@
       "id": "06",
       "name": "Agua 750 ml",
       "price": 7,
-      "image": "",
+      "image": "./assets/aguaCielo750ml.png",
       "type": "desayuno",
       "dateEntry": ""
     },
@@ -52,7 +52,7 @@
       "id": "07",
       "name": "Gaseosa 500 ml",
       "price": 7,
-      "image": "",
+      "image": "./assets/coca.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -60,7 +60,7 @@
       "id": "08",
       "name": "Soda 750 ml",
       "price": 10,
-      "image": "",
+      "image": "./assets/pespi750ml.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -68,7 +68,7 @@
       "id": "09",
       "name": "Hamburguesa Clasica",
       "price": 10,
-      "image": "",
+      "image": "./assets/simple.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -76,7 +76,7 @@
       "id": "10",
       "name": "Hamburguesa Doble",
       "price": 15,
-      "image": "",
+      "image": "/assets/doble.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },
@@ -84,7 +84,7 @@
       "id": "11",
       "name": "Papas Fritas",
       "price": 5,
-      "image": "",
+      "image": "./assets/papas-fritas.jpg",
       "type": "almuerzo",
       "dateEntry": "",
       "menu": ""
