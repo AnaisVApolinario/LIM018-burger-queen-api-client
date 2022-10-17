@@ -82,7 +82,7 @@
       "id": "10",
       "name": "Hamburguesa Doble",
       "price": 15,
-      "image": "/assets/doble.jpg",
+      "image": "./assets/doble.jpg",
       "type": "almuerzo",
       "dateEntry": ""
     },

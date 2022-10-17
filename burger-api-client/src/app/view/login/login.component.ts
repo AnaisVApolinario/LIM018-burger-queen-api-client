@@ -22,7 +22,7 @@ export class LoginComponent implements OnInit {
 
   constructor(private api: DataService, private router: Router) { }
 
-  errorStatus: boolean = true;
+  errorStatus: boolean = false;
   errorMsj: string = '';
   errorcode: string = '';
   ngOnInit(): void {
@@ -31,13 +31,14 @@ export class LoginComponent implements OnInit {
 
   onLogin(form: LoginI) {
     this.api.loginByEmail(form).subscribe(data => {
+      console.log('solo data', data)
       let dataResponse: ResponseI = data;
 
       console.log('data', dataResponse)
-      if (dataResponse) {
-
-        localStorage.setItem("token", dataResponse.token);
-        this.router.navigate(['/waiter']);
+      if (dataResponse.status == "ok") {
+console.log('status',dataResponse.status)
+        localStorage.setItem("token", dataResponse.result.token);
+        this.router.navigate(['waiter']);
 
       } else {
 
