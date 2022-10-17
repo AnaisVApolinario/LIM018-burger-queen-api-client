@@ -112,5 +112,27 @@
       "dateProcessed": "",
       "time": ""
     }
+  ], "users": [
+    {
+      "id":"1",
+      "nombre": "Maria Pereda",
+      "email": "mariaP@gmail.com",
+      "password":"123456",
+      "rol":"waiter"
+    },
+    {
+      "id":"2",
+      "nombre": "Juan Ferrer",
+      "email": "juanF@gmail.com",
+      "password":"123456",
+      "rol":"waiter"
+    },
+    {
+      "id":"3",
+      "nombre": "Piero Sanchez",
+      "email": "pieroS@gmail.com",
+      "password":"123456",
+      "rol":"chef"
+    }
   ]
 }
