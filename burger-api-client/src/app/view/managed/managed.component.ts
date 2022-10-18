@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService, ListaEmpleadosI } from 'src/app/services/data.service';
+import { DataService} from 'src/app/services/data.service'
+import { ListaEmpleadosI } from 'src/app/modelos/listaEmpleados.interface';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-managed',

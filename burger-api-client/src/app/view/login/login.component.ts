@@ -25,33 +25,36 @@ export class LoginComponent implements OnInit {
   errorStatus: boolean = false;
   errorMsj: string = '';
   errorcode: string = '';
+
+  // token:string;
+
   ngOnInit(): void {
-
+    // let token = localStorage.getItem('token');
+    // this.loginForm.
   }
-
   onLogin(form: LoginI) {
+    console.log(this.api.loginByEmail(form));
     this.api.loginByEmail(form).subscribe(data => {
-      console.log('solo data', data)
-      let dataResponse: ResponseI = data;
-
-      console.log('data', dataResponse)
-      if (dataResponse.status == "ok") {
-console.log('status',dataResponse.status)
+      let dataResponse:ResponseI = data;
+      console.log(dataResponse)
+      if(dataResponse.status == "ok") {
         localStorage.setItem("token", dataResponse.result.token);
         this.router.navigate(['waiter']);
-
-      } else {
-
-        if (this.errorcode == 'auth/missing-email') {
-          this.errorStatus = true
-          this.errorMsj = 'Debe ingresar un usuario y contraseña'
-        }
-      
+      }else{
+        this.errorStatus = true;
+        this.errorMsj = dataResponse.result.error_msg;
+        ;
       }
-      console.log('adios')
-    })
-
+    });
+      // token =>{
+      //   this.token=token;
+      //   this.router.navigate(['waiter']);
+      // }
+    // })
   }
+  // getIdToken(){
+    // console.log('toke',this.token);
+  // }
 }
 
 
