@@ -4,5 +4,20 @@ img {
    max-width: 90px;
    max-height: 100px;
    text-align: center;
-   
 }
+.groupBottons {
+background-color: black;
+/* opacity: .8; */
+padding: .7rem 1.2rem;
+border-radius: .25rem;
+font-size: 1rem;
+text-transform: uppercase;
+font-weight: 600;
+cursor: pointer;
+}
+.groupBottons button{
+  font-size: 2rem;
+  /* color: blanchedalmond; */
+  margin-right: 1rem;
+}
+
