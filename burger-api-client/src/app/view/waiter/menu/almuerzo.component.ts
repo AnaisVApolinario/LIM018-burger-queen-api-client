@@ -1,7 +1,8 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 import { Products } from 'src/app/modelos/products.interface';
 import { DataService } from 'src/app/services/data.service';
+import { mapProductToCardItem } from './helpers/map-product-item.helper';
 
 
 @Component({
@@ -10,6 +11,8 @@ import { DataService } from 'src/app/services/data.service';
   styleUrls: ['./almuerzo.component.css']
 })
 export class AlmuerzoComponent implements OnInit {
+  @Input() product!: Products;
+
   products: Products[] = [];
 
   filterProduc :Products[] = [];
@@ -35,8 +38,9 @@ export class AlmuerzoComponent implements OnInit {
     });
   }
 
-  agregar = () => {
-    console.log('hOLA')
+  agregar(): void {
+    const cardItem= mapProductToCardItem(this.product);
+    this.dataSVc.addItem(cardItem);
   }
 
 }
