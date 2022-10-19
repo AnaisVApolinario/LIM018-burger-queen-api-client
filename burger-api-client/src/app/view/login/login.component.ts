@@ -33,6 +33,7 @@ export class LoginComponent implements OnInit {
     // this.loginForm.
   }
   onLogin(form: LoginI) {
+
     console.log(this.api.postLogin(form));
     this.api.postLogin(form).subscribe(data => {
       console.log(data);
@@ -50,6 +51,7 @@ export class LoginComponent implements OnInit {
       //   this.router.navigate(['waiter']);
       // }
     // })
+
   }
   // getIdToken(){
     // console.log('toke',this.token);

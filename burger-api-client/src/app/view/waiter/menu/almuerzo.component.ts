@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+
 import { Products } from 'src/app/modelos/products.interface';
 import { DataService } from 'src/app/services/data.service';
+
 
 @Component({
   selector: 'app-almuerzo',
@@ -9,6 +11,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AlmuerzoComponent implements OnInit {
   products: Products[] = [];
+
   filterProduc :Products[] = [];
   constructor( private readonly dataSVc: DataService) { }
 
@@ -35,4 +38,5 @@ export class AlmuerzoComponent implements OnInit {
   agregar = () => {
     console.log('hOLA')
   }
+
 }
