@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { LoginService } from 'src/app/services/login.service';
-import { LoginI } from 'src/app/modelos/login.interface';
 
 import { Router } from '@angular/router';
 
@@ -15,47 +14,40 @@ import { Router } from '@angular/router';
 
 export class LoginComponent implements OnInit {
 
-  loginForm = new FormGroup({
-    email: new FormControl('', Validators.required),
-    password: new FormControl('', Validators.required)
-  })
+  loginForm: FormGroup;
 
-  constructor(private api: LoginService, private router: Router) { }
+  constructor(private api: LoginService, private router: Router) {
+    this.loginForm = new FormGroup({
+      email: new FormControl('pame@gmail.com', Validators.required),
+      password: new FormControl('123456', Validators.required)
+    })
+  }
 
   errorStatus: boolean = false;
-  errorMsj: string = '';
-  errorcode: string = '';
+  errorMsj: any = '';
 
-  // token:string;
 
   ngOnInit(): void {
-    // let token = localStorage.getItem('token');
-    // this.loginForm.
-  }
-  onLogin(form: LoginI) {
-
-    console.log(this.api.postLogin(form));
-    this.api.postLogin(form).subscribe(data => {
-      console.log(data);
-      // if(dataResponse.status == "ok") {
-      //   localStorage.setItem("token", dataResponse.result.token);
-      //   this.router.navigate(['waiter']);
-      // }else{
-      //   this.errorStatus = true;
-      //   this.errorMsj = dataResponse.result.error_msg;
-      //   ;
-      // }
-    });
-      // token =>{
-      //   this.token=token;
-      //   this.router.navigate(['waiter']);
-      // }
-    // })
 
   }
-  // getIdToken(){
-    // console.log('toke',this.token);
-  // }
+
+  onLogin() {
+
+    console.log('LOGIN FORM VALUE', this.loginForm.value);
+    this.api.postLogin(this.loginForm.value)
+      .subscribe((data) => {
+        console.log(data)
+        if (data) {
+          localStorage.setItem("token", data.token)
+          this.router.navigate(['waiter']);
+
+        } else {
+          this.errorStatus = true;
+          this.errorMsj = data.result.error_msg;
+        }
+      });
+  }
+
 }
 
 

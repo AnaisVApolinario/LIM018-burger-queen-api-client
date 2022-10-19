@@ -5,7 +5,7 @@
     </div>
 
     <!-- <form class="form-container"> -->
-    <form [formGroup]= "loginForm" (ngSubmit)= "onLogin(loginForm.value)" class="form-container">
+    <form [formGroup]= "loginForm" (ngSubmit)= "onLogin()" class="form-container">
       <!-- <h1>LOGIN</h1> -->
       <input type="text" id="email" class="form-login" placeholder="Correo" formControlName="email">
       <input type="password" id="password" class="form-login" placeholder="Contraseña" formControlName="password">

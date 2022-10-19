@@ -13,7 +13,7 @@ const httpOptions = {
     })
   };
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 
 export class LoginService {
     private readonly API = environment.api;
@@ -21,8 +21,8 @@ export class LoginService {
 
     constructor(private http: HttpClient) { }  
   
-    postLogin(form: LoginI): Observable<LoginI> {
-        let direccion = this.API + "auth";
-        return this.http.post<LoginI>(direccion, form, httpOptions);
+    postLogin(data: LoginI): Observable<any> {
+        const endpoint = this.API + "auth";
+        return this.http.post(endpoint, data, httpOptions);
     }
 }

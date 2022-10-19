@@ -1,31 +1,4 @@
 {
-  "auth": [
-    {
-      "id": "01",
-      "email": "pame@gmail.com",
-      "password": "123456"
-    },
-    {
-      "id": "02",
-      "email": "waiter@gmail.com",
-      "password": "123456"
-    },
-    {
-      "email": "pame@gmail.com",
-      "password": "123456",
-      "id": "WZzAWjL"
-    },
-    {
-      "email": "pame@gmail.com",
-      "password": "123456",
-      "id": "EutJmZ3"
-    },
-    {
-      "email": "pame@gmail.com",
-      "password": "123456",
-      "id": "6n5rWTH"
-    }
-  ],
   "products": [
     {
       "id": "01",
