@@ -34,7 +34,8 @@ private readonly API = environment.api;
 
   loginByEmail(form: LoginI): Observable<ResponseI> {
       let direccion = this.API + "auth";
-      return this.http.post<ResponseI>(direccion, { email: form.email, password: form.password });
+      return this.http.post<ResponseI>(direccion, form);
+      //return this.http.post<ResponseI>(direccion, { email: form.email, password: form.password });
   }
 
 

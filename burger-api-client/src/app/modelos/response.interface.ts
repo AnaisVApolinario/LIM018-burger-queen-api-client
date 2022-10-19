@@ -2,6 +2,7 @@ export interface ResponseI{
     
         status: string;
         result: any;
-        token: any;
+        // token: any;
+        // headers:any;
     
 }

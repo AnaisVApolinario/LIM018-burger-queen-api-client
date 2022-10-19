@@ -23,31 +23,34 @@ export class LoginComponent implements OnInit {
   constructor(private api: DataService, private router: Router) { }
 
   errorStatus: boolean = false;
-  errorMsj: string = '';
-  errorcode: string = '';
+  errorMsj: any = '';
+  
   ngOnInit(): void {
 
   }
-
   onLogin(form: LoginI) {
-    this.api.loginByEmail(form).subscribe(data => {
-      console.log('solo data', data)
-      let dataResponse: ResponseI = data;
+    console.log(form)
 
+    this.api.loginByEmail(form).subscribe(data => {
+      console.log(data)
+
+      let dataResponse: ResponseI = data;
       console.log('data', dataResponse)
+
       if (dataResponse.status == "ok") {
-console.log('status',dataResponse.status)
+        console.log('status', dataResponse.status)
+
         localStorage.setItem("token", dataResponse.result.token);
         this.router.navigate(['waiter']);
+        console.log('cambiando view', dataResponse.result.token)
 
       } else {
 
-        if (this.errorcode == 'auth/missing-email') {
           this.errorStatus = true
-          this.errorMsj = 'Debe ingresar un usuario y contraseña'
+          this.errorMsj = dataResponse.result.error_Msj;
         }
+
       
-      }
       console.log('adios')
     })
 

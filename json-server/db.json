@@ -1,8 +1,29 @@
 {
   "auth": [
     {
+      "id": "01",
       "email": "pame@gmail.com",
       "password": "123456"
+    },
+    {
+      "id": "02",
+      "email": "waiter@gmail.com",
+      "password": "123456"
+    },
+    {
+      "email": "pame@gmail.com",
+      "password": "123456",
+      "id": "WZzAWjL"
+    },
+    {
+      "email": "pame@gmail.com",
+      "password": "123456",
+      "id": "EutJmZ3"
+    },
+    {
+      "email": "pame@gmail.com",
+      "password": "123456",
+      "id": "6n5rWTH"
     }
   ],
   "products": [
@@ -118,27 +139,28 @@
       "dateProcessed": "",
       "time": ""
     }
-  ], "users": [
+  ],
+  "users": [
     {
-      "id":"1",
+      "id": "1",
       "nombre": "Maria Pereda",
       "email": "mariaP@gmail.com",
-      "password":"123456",
-      "rol":"waiter"
+      "password": "123456",
+      "rol": "waiter"
     },
     {
-      "id":"2",
+      "id": "2",
       "nombre": "Juan Ferrer",
       "email": "juanF@gmail.com",
-      "password":"123456",
-      "rol":"waiter"
+      "password": "123456",
+      "rol": "waiter"
     },
     {
-      "id":"3",
+      "id": "3",
       "nombre": "Piero Sanchez",
       "email": "pieroS@gmail.com",
-      "password":"123456",
-      "rol":"chef"
+      "password": "123456",
+      "rol": "chef"
     }
   ]
 }
