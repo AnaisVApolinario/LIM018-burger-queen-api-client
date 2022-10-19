@@ -1,7 +1,7 @@
-export interface ResponseI{
-    
-        status: string;
-        result: any;
-        token: any;
-    
+export interface ResponseI {
+
+  status: string;
+  result: any;
+  token: any;
+
 }
