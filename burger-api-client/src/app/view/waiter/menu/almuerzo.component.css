@@ -12,6 +12,18 @@
    background-color: antiquewhite;
    margin: 10px;
 }
+.nombreProducto{
+  text-align: center;
+}
+.containerAgregar{
+  display:flex;
+  justify-content: space-around;
+}
+.containerAgregar button{
+  width: 30px;
+  border-radius: 30%;
+  cursor: pointer;
+}
 /* .component{
   display: flex;
   width:400px;

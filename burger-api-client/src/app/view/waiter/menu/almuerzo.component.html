@@ -9,10 +9,12 @@
   <section class="cena-products">
     <div *ngFor="let item of filterProduc" class="cena-items">
       <img [src]="item.image" alt="">
-      <p>{{item.name}}</p>
-      <p>$/.{{item.price}}</p>
-  
-      <button (click)= "agregar()" id="btnLogin" class="btnAgregar">Agregar</button>
+      <p class="nombreProducto">{{item.name}}</p>
+      <div class="containerAgregar">
+        <button (click)= "agregar()" id="btnLogin" class="btnAgregar">-</button>
+        <p>$/.{{item.price}}</p>
+        <button (click)= "agregar()" id="btnLogin" class="btnAgregar">+</button>
+      </div>
     </div>
   </section>
 </div>
