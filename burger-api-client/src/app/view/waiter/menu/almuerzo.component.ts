@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Products, DataService } from 'src/app/services/data.service';
+import { Products } from 'src/app/modelos/products.interface';
+import { DataService } from 'src/app/services/data.service';
 
 @Component({
   selector: 'app-almuerzo',
@@ -13,13 +14,25 @@ export class AlmuerzoComponent implements OnInit {
 
   ngOnInit(): void {
     //actulizar datos de verdad aquí
+  }
+  mostrarDesayuno = () =>  {
     this.dataSVc.getProducts()
     .subscribe( items => { //response
-      // this.products = [...items];
+      this.filterProduc = items.filter( t => {
+        return t.type === "desayuno"
+      });
+    });
+  }
+  mostrarAlmuerzo = () =>  {
+    this.dataSVc.getProducts()
+    .subscribe( items => { //response
       this.filterProduc = items.filter( t => {
         return t.type === "almuerzo"
       });
     });
   }
 
+  agregar = () => {
+    console.log('hOLA')
+  }
 }

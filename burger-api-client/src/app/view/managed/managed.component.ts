@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { DataService} from 'src/app/services/data.service'
+import { empleadoService} from 'src/app/services/empleados.service'
 import { ListaEmpleadosI } from 'src/app/modelos/listaEmpleados.interface';
 import { Router } from '@angular/router';
 @Component({
@@ -11,7 +11,7 @@ export class ManagedComponent implements OnInit {
 
   empleados: ListaEmpleadosI[] = [];
 
-  constructor(private api:DataService, private router:Router) { }
+  constructor(private api:empleadoService, private router:Router) { }
 
   ngOnInit(): void {
     this.api.getAllEmpleados()
