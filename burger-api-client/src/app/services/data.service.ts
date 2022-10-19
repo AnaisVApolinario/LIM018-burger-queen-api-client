@@ -16,7 +16,12 @@ private readonly API = environment.api;
 
   getProducts(): Observable<Products[]> {
     let direccion =this.API + "products"
-    return this.http.get<Products[]>(direccion)
+    return this.http.get<Products[]>(direccion, {
+      //agregando cabecera
+      headers : {
+        Authorization: "Bearer EsUnSecreto",
+      }
+    })
    }
   updateCity(city: Products): Observable<void> {
     const body = {name:city.name};
@@ -27,10 +32,10 @@ private readonly API = environment.api;
     let direccion =this.API + "auth"
     return this.http.delete<void>(`${direccion}/${id}`);
   }
-  
+
 }
 
 
 
- 
+
 
