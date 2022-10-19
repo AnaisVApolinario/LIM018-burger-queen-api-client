@@ -1,0 +1,12 @@
+.tabla {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  margin-left: 500px;
+}
+
+.tabla-pedido {
+  display: flex;
+  text-align: center;
+}

@@ -64,7 +64,7 @@
       "name": "Agua 500 ml",
       "price": 5,
       "image": "./assets/aguaMineral.jpg",
-      "type": "bebidas",
+      "type": "almuerzo",
       "dateEntry": ""
     },
     {
