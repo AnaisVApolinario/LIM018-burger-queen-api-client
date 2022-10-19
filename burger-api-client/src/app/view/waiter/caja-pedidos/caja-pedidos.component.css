@@ -3,10 +3,14 @@
   flex-direction: column;
   background-color: white;
   width: 400px;
-  margin-left: 500px;
+  /* margin-left: 500px; */
 }
 
 .tabla-pedido {
   display: flex;
+  flex-direction: column;
   text-align: center;
+}
+.itemSeleccionado{
+  display: flex;
 }

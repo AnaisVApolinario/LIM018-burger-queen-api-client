@@ -1,18 +1,19 @@
-<section class="groupBottons">
+<div class="containerAlmuerzo">
+  <section class="groupBottons">
 
-  <button (click)=" mostrarDesayuno()" class="desayuno">Desayuno </button>
-  <button (click)=" mostrarAlmuerzo()" class="almuerzo">Almuerzo</button>
-
-</section>
-
-<section class="cena-products">
-  <div *ngFor="let item of filterProduc" class="cena-items">
-    <img [src]="item.image" alt="">
-    <p>{{item.name}}</p>
-    <p>$/.{{item.price}}</p>
-
-    <button (click)= "agregar()" id="btnLogin" class="btnAgregar">Agregar</button>
-
-  </div>
-  <app-caja-pedidos class="component"></app-caja-pedidos>
-</section>
+    <button (click)=" mostrarDesayuno()" class="desayuno">Desayuno </button>
+    <button (click)=" mostrarAlmuerzo()" class="almuerzo">Almuerzo</button>
+  
+  </section>
+  
+  <section class="cena-products">
+    <div *ngFor="let item of filterProduc" class="cena-items">
+      <img [src]="item.image" alt="">
+      <p>{{item.name}}</p>
+      <p>$/.{{item.price}}</p>
+  
+      <button (click)= "agregar()" id="btnLogin" class="btnAgregar">Agregar</button>
+    </div>
+  </section>
+</div>
+<app-caja-pedidos class="component"></app-caja-pedidos>
