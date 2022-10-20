@@ -35,20 +35,20 @@ export class LoginComponent implements OnInit {
 
     console.log('LOGIN FORM VALUE', this.loginForm.value);
     this.api.postLogin(this.loginForm.value)
-      .subscribe((data) => {
+      .subscribe({next: (data) => {
         console.log(data)
         if (data) {
           localStorage.setItem("token", data.token)
           this.router.navigate(['waiter']);
-        }
-      },
-        error => {
-          console.log(error)
-          this.errorStatus = true;
+
+        } 
+      },error :(error) =>{ 
+        console.log(error)
+        this.errorStatus = true;
           this.errorMsj = "Las datos son incorrectos";
 
-        }
-      );
+      }
+    });
   }
 
 }
