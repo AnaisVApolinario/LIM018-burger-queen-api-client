@@ -116,8 +116,8 @@
   "users": [
     {
       "id": "1",
-      "nombre": "Maria Pereda",
-      "email": "mariaP@gmail.com",
+      "nombre": "Pamela Perales",
+      "email": "pame@gmail.com",
       "password": "123456",
       "rol": "waiter"
     },

@@ -4,7 +4,7 @@ import { environment } from 'src/environments/environment';
 import { Observable } from 'rxjs';
 import { ListaEmpleadosI } from '../modelos/listaEmpleados.interface';
 
-@Injectable()
+@Injectable({providedIn: 'root'})
 
 export class empleadoService {
   private readonly API = environment.api;
@@ -14,7 +14,11 @@ export class empleadoService {
   
   getAllEmpleados(): Observable<ListaEmpleadosI[]> {
     let direccion = this.API + "users"
-    return this.http.get<ListaEmpleadosI[]>(direccion);
+    return this.http.get<ListaEmpleadosI[]>(direccion,{
+      headers : {
+        Authorization: "Bearer EsUnSecreto",
+      }
+    });
   }
 
 }
