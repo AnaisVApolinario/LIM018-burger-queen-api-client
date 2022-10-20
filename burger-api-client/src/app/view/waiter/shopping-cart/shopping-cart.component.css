@@ -1,0 +1,31 @@
+.tabla {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  width: 400px;
+  /* margin-left: 500px; */
+}
+
+.tabla-pedido {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 54px;
+}
+.total-label{
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  color:#757575;
+}
+.total{
+  font-size: 24px;
+  font-weight: 600;
+  align-self: flex-end;
+  margin-top: 54px;
+}

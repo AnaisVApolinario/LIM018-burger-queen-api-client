@@ -14,8 +14,9 @@ import { BotonHechoComponent } from './view/chef/boton-hecho/boton-hecho.compone
 import { NavegacionComponent } from './view/waiter/navegador/navegacion.component';
 import { NombresComponent } from './view/waiter/nombres/nombres.component';
 import { AlmuerzoComponent } from './view/waiter/menu/almuerzo.component';
-import { CajaPedidosComponent } from './view/waiter/caja-pedidos/caja-pedidos.component';
+import { ShoppingCartComponent } from './view/waiter/shopping-cart/shopping-cart.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
+import { ShoppingCartItemComponent } from './view/waiter/shopping-cart/shopping-cart-item.component';
 
 
 @NgModule({
@@ -29,7 +30,8 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
     NavegacionComponent,
     NombresComponent,
     AlmuerzoComponent,
-    CajaPedidosComponent
+    ShoppingCartComponent,
+    ShoppingCartItemComponent
   ],
   imports: [
     BrowserModule,

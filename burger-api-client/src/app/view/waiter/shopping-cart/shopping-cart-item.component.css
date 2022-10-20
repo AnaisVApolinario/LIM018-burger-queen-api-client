@@ -1,0 +1,31 @@
+.info{
+  display: flex;
+  align-items: center;
+}
+.itemSeleccionado {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+  padding: 0 24px;
+}
+
+.delete {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+}
+
+.delete:hover,
+.delete:focus {
+  background-color: #f0f0f0;
+  border-radius: 50%;
+  outline: none;
+}
+
+.delete img {
+  position: relative;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+}

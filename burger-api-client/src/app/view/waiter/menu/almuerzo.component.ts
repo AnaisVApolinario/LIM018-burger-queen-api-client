@@ -2,7 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 
 import { Products } from 'src/app/modelos/products.interface';
 import { DataService } from 'src/app/services/data.service';
-import { mapProductToCardItem } from './helpers/map-product-item.helper';
+// import { mapProductToCardItem } from './helpers/map-product-item.helper';
 
 
 @Component({
@@ -37,10 +37,12 @@ export class AlmuerzoComponent implements OnInit {
       });
     });
   }
-
-  agregar(): void {
-    const cardItem= mapProductToCardItem(this.product);
-    this.dataSVc.addItem(cardItem);
-  }
+ agregar(): void {
+  console.log('Hola');
+ }
+  // agregar(): void {
+  //   const cardItem= mapProductToCardItem(this.product);
+  //   this.dataSVc.addItem(cardItem);
+  // }
 
 }
