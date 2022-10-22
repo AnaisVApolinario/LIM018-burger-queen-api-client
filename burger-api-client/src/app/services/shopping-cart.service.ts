@@ -12,16 +12,19 @@ import { Products } from '../modelos/products.interface';
 export class ShoppingCartService {
   items: CartItem[] = [];
   get total(): number {
-    return this.items.reduce((acc, { price }) => acc += price, 0)
+    return this.items.reduce((acc, { price }) => (acc += price), 0)
   }
+
+  addItem( item: CartItem): void {
+    this.items = [...this.items, item];
+  }
+
   deleteItem(itemToDelete: CartItem): void {
     this.items = this.items.filter(
       (item) => item !== itemToDelete
     )
   }
-  addItem( item: Products): void {
-    this. items = [...this. items,  item];
-  }
+  
   //=======================================
   products: Products[] = [];
   private readonly API = environment.api;
