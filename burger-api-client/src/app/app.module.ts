@@ -17,6 +17,8 @@ import { CatalogoProductoComponent } from './view/waiter/menu/catalago-producto.
 import { ShoppingCartComponent } from './view/waiter/shopping-cart/shopping-cart.component';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { ShoppingCartItemComponent } from './view/waiter/shopping-cart/shopping-cart-item.component';
+import { NuevoComponent } from './view/managed/nuevo/nuevo.component';
+import { EditarComponent } from './view/managed/editar/editar.component';
 
 
 @NgModule({
@@ -31,7 +33,9 @@ import { ShoppingCartItemComponent } from './view/waiter/shopping-cart/shopping-
     NombresComponent,
     CatalogoProductoComponent,
     ShoppingCartComponent,
-    ShoppingCartItemComponent
+    ShoppingCartItemComponent,
+    NuevoComponent,
+    EditarComponent
   ],
   imports: [
     BrowserModule,

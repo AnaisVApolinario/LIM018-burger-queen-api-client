@@ -20,4 +20,10 @@ export class ManagedComponent implements OnInit {
       })
   }
 
+  editarEmpleado(id:string){
+    this.router.navigate(['managed/editar', id])
+  }
+  nuevoEmpleado(){
+    this.router.navigate(['managed/nuevo'])
+  }
 }
