@@ -15,7 +15,7 @@ export class CatalogoProductoComponent implements OnInit {
   @Input() product!: Products;
   // products: Products[] = [];
   filterProduc :Products[] = [];
-  constructor( private readonly shoppingSvc: ShoppingCartService) { }
+  constructor( private shoppingSvc: ShoppingCartService) { }
 
   ngOnInit(): void {
     //actulizar datos de verdad aquí
@@ -36,8 +36,9 @@ export class CatalogoProductoComponent implements OnInit {
       });
     });
   }
- addToCart(): void {
-  const cartItem = mapProductToCardItem(this.product);
+ addToCart(product:Products): void {
+  console.log(product)
+  const cartItem = mapProductToCardItem(product);
   this.shoppingSvc.addItem(cartItem);
  }
   // agregar(): void {

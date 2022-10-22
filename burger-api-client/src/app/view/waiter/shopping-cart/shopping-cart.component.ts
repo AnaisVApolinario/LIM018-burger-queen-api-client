@@ -16,8 +16,6 @@ export class ShoppingCartComponent implements OnInit {
     return this.shoppingCartService.total;
   }
 
-  showItems = true;
-
   constructor(private shoppingCartService:ShoppingCartService) { }
 
   ngOnInit(): void {
@@ -27,7 +25,5 @@ export class ShoppingCartComponent implements OnInit {
     this.shoppingCartService.deleteItem(itemToDelete);
   }
 
-  toggleItemVisibility():void {
-    this.showItems = !this.showItems;
-  }
+ 
 }
