@@ -37,7 +37,8 @@ export class LoginComponent implements OnInit {
     this.api.postLogin(this.loginForm.value)
       .subscribe({
         next: (data) => {
-          if (data) {
+          if (data.token) {
+            console.log(data.token)
             localStorage.setItem("token", data.token)
             this.router.navigate(['waiter']);
           }
