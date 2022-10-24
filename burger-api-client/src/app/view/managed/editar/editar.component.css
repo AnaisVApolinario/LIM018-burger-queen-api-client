@@ -1,0 +1,47 @@
+.container{
+  height: 90vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+form{
+  width:500px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  background-color: beige;
+}
+.singel, .col{
+  display: flex;
+  gap:5px;
+  margin: 1em;
+  flex-direction: column;
+}
+.form-group input{
+  width: 100%;
+  font-size: 100%;
+  padding: 0.8em;
+  outline: none;
+  border: 2px solid rgb(200, 200, 200);
+  background-color: transparent;
+  border-radius: 20px;
+}
+.form-group :is(input:focus, input:valid) {
+  border-color: rgb(150, 150, 200);
+}
+.row{
+  display: flex;
+  justify-content: space-around;
+} 
+.form-group label{
+  font-size: .9rem;
+  margin-left: 25px;
+  font-weight: bold;
+  color: #05060f99;
+
+}
+
