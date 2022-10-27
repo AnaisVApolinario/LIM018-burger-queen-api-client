@@ -1,7 +1,9 @@
 <section class="tabla">
   <h2 class="title">Agregar Pedido</h2>
   <div class="tabla-pedido">
-    <app-shopping-cart-item *ngFor="let item of cartItems" [cartItem]="item" (cartItemDelete)="deleteItem(item)">
+    <app-shopping-cart-item *ngFor="let item of cartItems" 
+    [cartItem]="item" 
+    (cartItemDelete)="deleteItem(item)">
     </app-shopping-cart-item>
     <p class="total"><span class="total-label">Total:</span>$ {{total}}</p>
     <button class="listo">Enviar Pedido</button>

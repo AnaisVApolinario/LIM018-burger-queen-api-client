@@ -36,7 +36,7 @@
       "id": "05",
       "name": "Agua 500 ml",
       "price": 5,
-      "image": "./assets/aguaMineral.jpg",
+      "image": "./assets/agua500.png",
       "type": "almuerzo",
       "dateEntry": ""
     },

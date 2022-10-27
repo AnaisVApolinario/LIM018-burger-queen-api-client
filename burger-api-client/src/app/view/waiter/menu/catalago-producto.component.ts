@@ -13,7 +13,7 @@ import { mapProductToCardItem } from './helpers/map-product-item.helper';
 })
 export class CatalogoProductoComponent implements OnInit {
   @Input() product!: Products;
-  // products: Products[] = [];
+
   filterProduc :Products[] = [];
   constructor( private shoppingSvc: ShoppingCartService) { }
 
@@ -37,7 +37,6 @@ export class CatalogoProductoComponent implements OnInit {
     });
   }
  addToCart(product:Products): void {
-  console.log(product)
   const cartItem = mapProductToCardItem(product);
   this.shoppingSvc.addItem(cartItem);
  }

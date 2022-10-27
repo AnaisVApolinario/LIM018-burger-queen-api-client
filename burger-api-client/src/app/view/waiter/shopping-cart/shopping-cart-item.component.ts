@@ -14,7 +14,7 @@ export class ShoppingCartItemComponent implements OnInit {
   ngOnInit(): void {
     console.log(this.cartItem)
   }
-  onDeleteClick(): void {
-    this.cartItemDelete.emit();
+  onDeleteClick(): void { 
+    this.cartItemDelete.emit(); 
   }
 }

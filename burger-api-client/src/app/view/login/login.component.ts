@@ -33,12 +33,10 @@ export class LoginComponent implements OnInit {
 
   onLogin() {
 
-    console.log('LOGIN FORM VALUE', this.loginForm.value);
     this.api.postLogin(this.loginForm.value)
       .subscribe({
         next: (data) => {
           if (data.token) {
-            console.log(data.token)
             localStorage.setItem("token", data.token)
             this.router.navigate(['waiter']);
           }
