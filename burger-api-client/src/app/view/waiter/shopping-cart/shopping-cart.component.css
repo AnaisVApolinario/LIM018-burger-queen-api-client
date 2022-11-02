@@ -3,6 +3,7 @@
   flex-direction: column;
   background-color: white;
   width: 400px;
+  border-radius: 20px;
   /* margin-left: 500px; */
 }
 
@@ -29,4 +30,11 @@
   font-weight: 600;
   align-self: flex-end;
   margin-top: 54px;
+}
+.listo{
+ background-color: green;
+ color : white;
+ height: 30px ;
+ font-size: 15px;
+ border : none ;
 }
