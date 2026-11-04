@@ -2,115 +2,133 @@
   "products": [
     {
       "id": "01",
-      "name": "Cafe Americano",
+      "name": "Café americano",
       "price": 5,
-      "image": "./assets/americano.jpg",
+      "image": "assets/americano.jpg",
       "type": "desayuno",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "02",
-      "name": "Cafe con Leche",
+      "name": "Café con leche",
       "price": 7,
-      "image": "./assets/cafeLeche.jpg",
+      "image": "assets/cafeLeche.jpg",
       "type": "desayuno",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "03",
-      "name": "Jugo Natural",
-      "price": 7,
-      "image": "./assets/jugoNatural.jpg",
+      "name": "Sándwich de jamón y queso",
+      "price": 10,
+      "image": "assets/jamonQueso.jpeg",
       "type": "desayuno",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "04",
-      "name": "sandwich de Queso",
-      "price": 10,
-      "image": "./assets/jamonQueso.jpeg",
+      "name": "Jugo de frutas natural",
+      "price": 7,
+      "image": "assets/jugoNatural.jpg",
       "type": "desayuno",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "05",
-      "name": "Agua 500 ml",
-      "price": 5,
-      "image": "./assets/agua500.png",
+      "name": "Hamburguesa simple",
+      "price": 10,
+      "image": "assets/simple.jpg",
       "type": "almuerzo",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "06",
-      "name": "Agua 750 ml",
-      "price": 7,
-      "image": "./assets/aguaCielo750ml.png",
-      "type": "desayuno",
-      "dateEntry": ""
+      "name": "Hamburguesa doble",
+      "price": 15,
+      "image": "assets/doble.jpg",
+      "type": "almuerzo",
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "07",
-      "name": "Gaseosa 500 ml",
-      "price": 7,
-      "image": "./assets/coca.jpg",
+      "name": "Papas fritas",
+      "price": 5,
+      "image": "assets/papas-fritas.jpg",
       "type": "almuerzo",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "08",
-      "name": "Soda 750 ml",
-      "price": 10,
-      "image": "./assets/pespi750ml.jpg",
+      "name": "Aros de cebolla",
+      "price": 5,
+      "image": "assets/arosCebolla.jpg",
       "type": "almuerzo",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "09",
-      "name": "Hamburguesa Clasica",
-      "price": 10,
-      "image": "./assets/simple.jpg",
+      "name": "Agua 500 ml",
+      "price": 5,
+      "image": "assets/aguaMineral.jpg",
       "type": "almuerzo",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "10",
-      "name": "Hamburguesa Doble",
-      "price": 15,
-      "image": "./assets/doble.jpg",
+      "name": "Agua 750 ml",
+      "price": 7,
+      "image": "assets/aguaCielo750ml.png",
       "type": "almuerzo",
-      "dateEntry": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     },
     {
       "id": "11",
-      "name": "Papas Fritas",
-      "price": 5,
-      "image": "./assets/papas-fritas.jpg",
+      "name": "Gaseosa 500 ml",
+      "price": 7,
+      "image": "assets/coca.jpg",
       "type": "almuerzo",
-      "dateEntry": "",
-      "menu": ""
+      "dateEntry": "2026-10-01T12:00:00.000Z"
+    },
+    {
+      "id": "12",
+      "name": "Gaseosa 750 ml",
+      "price": 10,
+      "image": "assets/pespi750ml.jpg",
+      "type": "almuerzo",
+      "dateEntry": "2026-10-01T12:00:00.000Z"
     }
   ],
   "orders": [
     {
-      "id": 1,
-      "userId": "",
-      "table": "2",
+      "userId": "2",
+      "waiterName": "Juan Ferrer",
+      "client": "Paco",
+      "table": "0001",
       "products": [
         {
-          "product": "American Coffee",
+          "productId": "01",
+          "product": "Café americano",
           "price": 5,
-          "qty": 1
+          "qty": 2
         },
         {
-          "product": "Coffee with milk",
+          "productId": "03",
+          "product": "Sándwich de jamón y queso",
+          "price": 10,
+          "qty": 2
+        },
+        {
+          "productId": "04",
+          "product": "Jugo de frutas natural",
           "price": 7,
           "qty": 1
         }
       ],
-      "status": "",
-      "dateEntry": "",
-      "dateProcessed": "",
-      "time": ""
+      "total": 37,
+      "status": "delivered",
+      "dateEntry": "2026-11-03T14:04:50.908Z",
+      "dateProcessed": "2026-11-03T14:06:08.625Z",
+      "dateDelivered": "2026-11-03T14:07:12.661Z",
+      "id": 1
     }
   ],
   "users": [
@@ -130,10 +148,17 @@
     },
     {
       "id": "3",
-      "nombre": "Piero Sanchez",
+      "nombre": "Piero Sánchez",
       "email": "pieroS@gmail.com",
       "password": "123456",
       "rol": "chef"
+    },
+    {
+      "id": "4",
+      "nombre": "Admin Amero",
+      "email": "admin@gmail.com",
+      "password": "123456",
+      "rol": "admin"
     }
   ]
 }
