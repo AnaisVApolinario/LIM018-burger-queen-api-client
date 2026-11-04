@@ -1,0 +1,55 @@
+<section class="page">
+  <div class="page__bar">
+    <h1 class="page__title">Productos</h1>
+    <a class="btn btn-primary" routerLink="/admin/products/new">Nuevo producto</a>
+  </div>
+
+  <p *ngIf="loading" class="state" role="status">Cargando productos…</p>
+  <div *ngIf="error" class="alert alert-error" role="alert">
+    No se pudo cargar la lista.
+    <button type="button" class="btn btn-link" (click)="load()">Reintentar</button>
+  </div>
+
+  <div class="table-wrap" *ngIf="!loading && !error">
+    <table class="table">
+      <caption class="sr-only">
+        Lista de productos
+      </caption>
+      <thead>
+        <tr>
+          <th scope="col"><span class="sr-only">Imagen</span></th>
+          <th scope="col">Nombre</th>
+          <th scope="col">Menú</th>
+          <th scope="col">Precio</th>
+          <th scope="col"><span class="sr-only">Acciones</span></th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let product of products; trackBy: trackById">
+          <td>
+            <img
+              *ngIf="product.image"
+              class="table__thumb"
+              [src]="product.image"
+              alt=""
+              width="56"
+              height="40"
+              loading="lazy"
+            />
+          </td>
+          <td>{{ product.name }}</td>
+          <td>
+            <span class="badge">{{ menuLabels[product.type] }}</span>
+          </td>
+          <td>{{ product.price | currency }}</td>
+          <td class="table__actions">
+            <a class="btn" [routerLink]="['/admin/products', product.id]">Editar</a>
+            <button type="button" class="btn btn-danger-ghost" (click)="remove(product)">
+              Eliminar
+            </button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</section>

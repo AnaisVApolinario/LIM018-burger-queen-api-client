@@ -1,0 +1,30 @@
+<article class="order-card" [class.is-late]="isLate">
+  <header class="order-card__head">
+    <div>
+      <h3 class="order-card__client">{{ order.client }}</h3>
+      <p class="order-card__meta">
+        Mesa {{ order.table }} · {{ order.waiterName }} · {{ order.dateEntry | date: 'shortTime' }}
+      </p>
+    </div>
+    <p class="order-card__time" [class.is-late]="isLate">{{ timeLabel }}</p>
+  </header>
+
+  <ul class="order-card__items">
+    <li *ngFor="let item of order.products">
+      <span class="order-card__qty">{{ item.qty }}×</span> {{ item.product }}
+    </li>
+  </ul>
+
+  <footer class="order-card__foot">
+    <strong>Total: {{ order.total | currency }}</strong>
+    <button
+      *ngIf="actionLabel"
+      type="button"
+      class="btn btn-primary"
+      [disabled]="busy"
+      (click)="action.emit()"
+    >
+      {{ actionLabel }}
+    </button>
+  </footer>
+</article>

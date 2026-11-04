@@ -1,0 +1,39 @@
+<article class="product-card">
+  <div class="product-card__media">
+    <img
+      *ngIf="product.image; else noImage"
+      [src]="product.image"
+      [alt]="product.name"
+      loading="lazy"
+      width="240"
+      height="160"
+    />
+    <ng-template #noImage>
+      <span class="product-card__placeholder" aria-hidden="true">🍔</span>
+    </ng-template>
+  </div>
+
+  <h3 class="product-card__name">{{ product.name }}</h3>
+  <p class="product-card__price">{{ product.price | currency }}</p>
+
+  <div class="stepper">
+    <button
+      type="button"
+      class="btn btn-icon"
+      [disabled]="qty === 0"
+      [attr.aria-label]="'Quitar una unidad de ' + product.name"
+      (click)="decrease.emit()"
+    >
+      −
+    </button>
+    <span class="stepper__qty" aria-live="polite">{{ qty }}</span>
+    <button
+      type="button"
+      class="btn btn-icon btn-primary"
+      [attr.aria-label]="'Agregar ' + product.name"
+      (click)="increase.emit()"
+    >
+      +
+    </button>
+  </div>
+</article>

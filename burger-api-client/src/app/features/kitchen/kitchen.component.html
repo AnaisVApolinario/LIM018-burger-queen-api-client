@@ -1,0 +1,57 @@
+<section class="page">
+  <h1 class="page__title">Cocina</h1>
+
+  <div class="tabs" role="group" aria-label="Estado de los pedidos">
+    <button
+      type="button"
+      class="tab"
+      [class.is-active]="view === 'pending'"
+      [attr.aria-pressed]="view === 'pending'"
+      (click)="select('pending')"
+    >
+      Pendientes ({{ pending.length }})
+    </button>
+    <button
+      type="button"
+      class="tab"
+      [class.is-active]="view === 'done'"
+      [attr.aria-pressed]="view === 'done'"
+      (click)="select('done')"
+    >
+      Preparados ({{ done.length }})
+    </button>
+  </div>
+
+  <p *ngIf="loading" class="state" role="status">Cargando pedidos…</p>
+  <p *ngIf="error" class="alert alert-error" role="alert">
+    No se pudieron actualizar los pedidos. Reintentando automáticamente…
+  </p>
+
+  <ng-container *ngIf="view === 'pending'">
+    <p *ngIf="!loading && !error && pending.length === 0" class="state">
+      No hay pedidos pendientes. ¡Buen trabajo!
+    </p>
+    <ul class="order-grid">
+      <li *ngFor="let order of pending; trackBy: trackById">
+        <app-order-card
+          [order]="order"
+          [now]="now"
+          [busy]="busyId === order.id"
+          actionLabel="Marcar listo"
+          (action)="markReady(order)"
+        ></app-order-card>
+      </li>
+    </ul>
+  </ng-container>
+
+  <ng-container *ngIf="view === 'done'">
+    <p *ngIf="!loading && !error && done.length === 0" class="state">
+      Todavía no hay pedidos preparados.
+    </p>
+    <ul class="order-grid">
+      <li *ngFor="let order of done; trackBy: trackById">
+        <app-order-card [order]="order" [now]="now"></app-order-card>
+      </li>
+    </ul>
+  </ng-container>
+</section>

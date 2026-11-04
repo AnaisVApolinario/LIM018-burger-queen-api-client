@@ -1,7 +1,8 @@
-/* To learn more about this file see: https://angular.io/config/tsconfig. */
 {
   "compileOnSave": false,
   "compilerOptions": {
+    "ignoreDeprecations": "6.0",
+    "rootDir": "./src",
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
@@ -16,6 +17,9 @@
     "experimentalDecorators": true,
     "moduleResolution": "node",
     "importHelpers": true,
+    "types": [
+      "jasmine"
+    ],
     "target": "es2020",
     "module": "es2020",
     "lib": [

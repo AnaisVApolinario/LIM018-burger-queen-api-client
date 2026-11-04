@@ -1,0 +1,13 @@
+<div class="toasts">
+  <div
+    *ngFor="let toast of toasts$ | async; trackBy: trackById"
+    class="toast"
+    [class.toast--error]="toast.kind === 'error'"
+    [attr.role]="toast.kind === 'error' ? 'alert' : 'status'"
+  >
+    <span>{{ toast.text }}</span>
+    <button type="button" class="toast__close" aria-label="Cerrar aviso" (click)="dismiss(toast.id)">
+      ✕
+    </button>
+  </div>
+</div>

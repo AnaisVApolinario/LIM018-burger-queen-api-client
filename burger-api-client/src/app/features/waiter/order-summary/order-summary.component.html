@@ -1,0 +1,53 @@
+<section class="card summary">
+  <h2 class="summary__title">Pedido</h2>
+
+  <p *ngIf="lines.length === 0" class="state">Aún no agregaste productos.</p>
+
+  <ul *ngIf="lines.length > 0" class="summary__lines">
+    <li *ngFor="let line of lines; trackBy: trackByLine" class="summary__line">
+      <div class="summary__info">
+        <span class="summary__name">{{ line.product.name }}</span>
+        <span class="summary__price">{{ line.product.price * line.qty | currency }}</span>
+      </div>
+      <div class="stepper stepper--small">
+        <button
+          type="button"
+          class="btn btn-icon"
+          [attr.aria-label]="'Quitar una unidad de ' + line.product.name"
+          (click)="decrease.emit(line.product.id)"
+        >
+          −
+        </button>
+        <span class="stepper__qty">{{ line.qty }}</span>
+        <button
+          type="button"
+          class="btn btn-icon"
+          [attr.aria-label]="'Agregar una unidad de ' + line.product.name"
+          (click)="increase.emit(line.product)"
+        >
+          +
+        </button>
+        <button
+          type="button"
+          class="btn btn-icon btn-danger-ghost"
+          [attr.aria-label]="'Eliminar ' + line.product.name"
+          (click)="remove.emit(line.product.id)"
+        >
+          ✕
+        </button>
+      </div>
+    </li>
+  </ul>
+
+  <p class="summary__total">
+    <span>Total</span>
+    <strong>{{ total | currency }}</strong>
+  </p>
+
+  <button type="button" class="btn btn-primary btn-block" [disabled]="!canSend" (click)="confirm.emit()">
+    {{ sending ? 'Enviando…' : 'Enviar a cocina' }}
+  </button>
+  <p class="hint" *ngIf="!canSend && !sending">
+    Completa cliente y mesa, y agrega al menos un producto.
+  </p>
+</section>

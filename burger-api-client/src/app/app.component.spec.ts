@@ -1,35 +1,28 @@
+import { HttpClientTestingModule } from '@angular/common/http/testing';
 import { TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './shared/header/header.component';
+import { ToastComponent } from './shared/toast/toast.component';
 
 describe('AppComponent', () => {
   beforeEach(async () => {
+    localStorage.clear();
     await TestBed.configureTestingModule({
-      imports: [
-        RouterTestingModule
-      ],
-      declarations: [
-        AppComponent
-      ],
+      imports: [RouterTestingModule, HttpClientTestingModule],
+      declarations: [AppComponent, HeaderComponent, ToastComponent],
     }).compileComponents();
   });
 
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app).toBeTruthy();
-  });
+  afterEach(() => localStorage.clear());
 
-  it(`should have as title 'burger-api-client'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.componentInstance;
-    expect(app.title).toEqual('burger-api-client');
-  });
-
-  it('should render title', () => {
+  it('arma la estructura base: cabecera, contenido y avisos', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
-    const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('.content span')?.textContent).toContain('burger-api-client app is running!');
+    const root = fixture.nativeElement as HTMLElement;
+
+    expect(root.querySelector('app-header')).not.toBeNull();
+    expect(root.querySelector('main router-outlet')).not.toBeNull();
+    expect(root.querySelector('app-toast')).not.toBeNull();
   });
 });

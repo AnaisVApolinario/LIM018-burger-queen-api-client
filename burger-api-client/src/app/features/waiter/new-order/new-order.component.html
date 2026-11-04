@@ -1,0 +1,60 @@
+<section class="page page--split">
+  <div class="page__main">
+    <form class="card order-info" [formGroup]="form" novalidate>
+      <div class="field">
+        <label for="client">Nombre del cliente</label>
+        <input id="client" type="text" formControlName="client" autocomplete="off" />
+      </div>
+      <div class="field field--small">
+        <label for="table">Mesa</label>
+        <input id="table" type="text" inputmode="numeric" formControlName="table" autocomplete="off" />
+      </div>
+    </form>
+
+    <div class="tabs" role="group" aria-label="Menú">
+      <button
+        *ngFor="let m of menus"
+        type="button"
+        class="tab"
+        [class.is-active]="menu === m.value"
+        [attr.aria-pressed]="menu === m.value"
+        (click)="selectMenu(m.value)"
+      >
+        {{ m.label }}
+      </button>
+    </div>
+
+    <p *ngIf="loading" class="state" role="status">Cargando menú…</p>
+    <div *ngIf="loadError" class="alert alert-error" role="alert">
+      No se pudo cargar el menú.
+      <button type="button" class="btn btn-link" (click)="loadProducts()">Reintentar</button>
+    </div>
+    <p *ngIf="!loading && !loadError && visibleProducts.length === 0" class="state">
+      No hay productos en este menú.
+    </p>
+
+    <ul class="product-grid">
+      <li *ngFor="let product of visibleProducts; trackBy: trackById">
+        <app-product-card
+          [product]="product"
+          [qty]="cart.qtyOf(product.id)"
+          (increase)="cart.add(product)"
+          (decrease)="cart.decrement(product.id)"
+        ></app-product-card>
+      </li>
+    </ul>
+  </div>
+
+  <aside class="page__side" aria-label="Resumen del pedido">
+    <app-order-summary
+      [lines]="(lines$ | async) ?? []"
+      [total]="cart.total"
+      [canSend]="canSend"
+      [sending]="sending"
+      (increase)="cart.add($event)"
+      (decrease)="cart.decrement($event)"
+      (remove)="cart.remove($event)"
+      (confirm)="send()"
+    ></app-order-summary>
+  </aside>
+</section>

@@ -1,0 +1,23 @@
+<section class="page">
+  <h1 class="page__title">Pedidos listos para servir</h1>
+
+  <p *ngIf="loading" class="state" role="status">Cargando pedidos…</p>
+  <p *ngIf="error" class="alert alert-error" role="alert">
+    No se pudieron actualizar los pedidos. Reintentando automáticamente…
+  </p>
+  <p *ngIf="!loading && !error && orders.length === 0" class="state">
+    No hay pedidos listos por ahora.
+  </p>
+
+  <ul class="order-grid">
+    <li *ngFor="let order of orders; trackBy: trackById">
+      <app-order-card
+        [order]="order"
+        [now]="now"
+        [busy]="busyId === order.id"
+        actionLabel="Marcar entregado"
+        (action)="markDelivered(order)"
+      ></app-order-card>
+    </li>
+  </ul>
+</section>

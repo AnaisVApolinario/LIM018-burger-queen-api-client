@@ -1,0 +1,23 @@
+<header class="header" *ngIf="user$ | async as user">
+  <a class="header__brand" [routerLink]="homeFor(user.rol)">
+    <img src="assets/logo-amero-fin.png" alt="" width="40" height="40" />
+    <span class="brand-title">Amero Burger</span>
+  </a>
+
+  <nav class="header__nav" aria-label="Principal">
+    <a
+      *ngFor="let link of linksFor(user.rol)"
+      [routerLink]="link.path"
+      routerLinkActive="is-active"
+      [routerLinkActiveOptions]="{ exact: true }"
+      >{{ link.label }}</a
+    >
+  </nav>
+
+  <div class="header__user">
+    <span class="header__who">
+      <strong>{{ user.nombre }}</strong> · {{ roleLabel(user.rol) }}
+    </span>
+    <button type="button" class="btn btn-ghost" (click)="logout()">Cerrar sesión</button>
+  </div>
+</header>
