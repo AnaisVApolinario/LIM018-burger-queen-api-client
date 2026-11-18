@@ -129,6 +129,90 @@
       "dateProcessed": "2026-11-03T14:06:08.625Z",
       "dateDelivered": "2026-11-03T14:07:12.661Z",
       "id": 1
+    },
+    {
+      "userId": "1",
+      "waiterName": "Pamela Perales",
+      "client": "123",
+      "table": "010",
+      "products": [
+        {
+          "productId": "01",
+          "product": "Café americano",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "02",
+          "product": "Café con leche",
+          "price": 7,
+          "qty": 1
+        }
+      ],
+      "total": 12,
+      "status": "ready",
+      "dateEntry": "2026-11-18T13:51:27.087Z",
+      "dateProcessed": "2026-11-18T13:52:33.089Z",
+      "dateDelivered": null,
+      "id": 2
+    },
+    {
+      "userId": "1",
+      "waiterName": "Pamela Perales",
+      "client": "Mario",
+      "table": "003",
+      "products": [
+        {
+          "productId": "01",
+          "product": "Café americano",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "03",
+          "product": "Sándwich de jamón y queso",
+          "price": 10,
+          "qty": 1
+        }
+      ],
+      "total": 15,
+      "status": "pending",
+      "dateEntry": "2026-11-18T14:00:57.258Z",
+      "dateProcessed": null,
+      "dateDelivered": null,
+      "id": 3
+    },
+    {
+      "userId": "1",
+      "waiterName": "Pamela Perales",
+      "client": "Flavia",
+      "table": "002",
+      "products": [
+        {
+          "productId": "05",
+          "product": "Hamburguesa simple",
+          "price": 10,
+          "qty": 1
+        },
+        {
+          "productId": "07",
+          "product": "Papas fritas",
+          "price": 5,
+          "qty": 1
+        },
+        {
+          "productId": "09",
+          "product": "Agua 500 ml",
+          "price": 5,
+          "qty": 1
+        }
+      ],
+      "total": 20,
+      "status": "pending",
+      "dateEntry": "2026-11-18T14:01:35.700Z",
+      "dateProcessed": null,
+      "dateDelivered": null,
+      "id": 4
     }
   ],
   "users": [

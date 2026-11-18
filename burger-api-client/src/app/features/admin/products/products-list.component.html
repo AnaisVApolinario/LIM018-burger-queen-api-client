@@ -25,8 +25,8 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let product of products; trackBy: trackById">
-          <td>
+       <tr *ngFor="let product of products; trackBy: trackById">
+          <td class="table__image">
             <img
               *ngIf="product.image"
               class="table__thumb"
@@ -37,11 +37,11 @@
               loading="lazy"
             />
           </td>
-          <td>{{ product.name }}</td>
-          <td>
+          <td data-label="Nombre">{{ product.name }}</td>
+          <td data-label="Menú">
             <span class="badge">{{ menuLabels[product.type] }}</span>
           </td>
-          <td>{{ product.price | currency }}</td>
+          <td data-label="Precio">{{ product.price | currency }}</td>
           <td class="table__actions">
             <a class="btn" [routerLink]="['/admin/products', product.id]">Editar</a>
             <button type="button" class="btn btn-danger-ghost" (click)="remove(product)">

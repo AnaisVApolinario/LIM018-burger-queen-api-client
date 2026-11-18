@@ -2,9 +2,19 @@
 
 Aplicación web para gestionar los pedidos de una hamburguesería: el mesero toma la orden, la cocina la prepara y el administrador mantiene el menú y el equipo. Proyecto de Laboratoria (LIM018) hecho en **Angular 14**.
 
-<!-- ![Login](docs/capturas/login.png) -->
-<!-- ![Mesero](docs/capturas/mesero.png) -->
-<!-- ![Cocina](docs/capturas/cocina.png) -->
+## 📸 Vistas de la aplicación
+
+### Inicio de sesión
+![Login](docs/capturas/login.png)
+
+### Vista de Mesero
+![Mesero](docs/capturas/mesero_mobile.png)
+
+### Vista de Cocina
+![Cocina](docs/capturas/cocina_mobile.png)
+
+### Vista de Administrador
+![Administrador](docs/capturas/admin_ab.png)
 
 ## ✨ Funcionalidades
 

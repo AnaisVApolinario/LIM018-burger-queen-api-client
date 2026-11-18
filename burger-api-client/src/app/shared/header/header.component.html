@@ -14,9 +14,10 @@
     >
   </nav>
 
-  <div class="header__user">
+    <div class="header__user">
     <span class="header__who">
-      <strong>{{ user.nombre }}</strong> · {{ roleLabel(user.rol) }}
+      <strong class="header__name">{{ user.nombre }}</strong>
+      <span class="header__role">{{ roleLabel(user.rol) }}</span>
     </span>
     <button type="button" class="btn btn-ghost" (click)="logout()">Cerrar sesión</button>
   </div>

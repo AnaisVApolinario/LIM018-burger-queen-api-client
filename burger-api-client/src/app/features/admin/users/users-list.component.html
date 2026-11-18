@@ -24,10 +24,10 @@
         </tr>
       </thead>
       <tbody>
-        <tr *ngFor="let user of users; trackBy: trackById">
-          <td>{{ user.nombre }}</td>
-          <td>{{ user.email }}</td>
-          <td>
+       <tr *ngFor="let user of users; trackBy: trackById">
+          <td data-label="Nombre">{{ user.nombre }}</td>
+          <td data-label="Correo">{{ user.email }}</td>
+          <td data-label="Rol">
             <span class="badge">{{ roleLabels[user.rol] }}</span>
           </td>
           <td class="table__actions">
