@@ -6,6 +6,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { makeUser } from 'src/testing/factories';
 import { SessionService } from '../services/session.service';
 import { AuthInterceptor } from './auth.interceptor';
+import { ToastService } from '../services/toast.service';
 
 describe('AuthInterceptor', () => {
   let http: HttpClient;
@@ -58,7 +59,8 @@ describe('AuthInterceptor', () => {
     req.flush({});
   });
 
-  it('cierra la sesión y vuelve al login ante un 401', () => {
+ it('cierra la sesión, avisa y vuelve al login ante un 401', () => {
+    const toastError = spyOn(TestBed.inject(ToastService), 'error');
     session.start({ token: 'tok', user: makeUser() });
     let failed = false;
 
@@ -67,6 +69,7 @@ describe('AuthInterceptor', () => {
 
     expect(failed).toBeTrue();
     expect(session.token).toBeNull();
+    expect(toastError).toHaveBeenCalledWith('Tu sesión expiró. Ingresa de nuevo.');
     expect(navigate).toHaveBeenCalledWith(['/login']);
   });
 

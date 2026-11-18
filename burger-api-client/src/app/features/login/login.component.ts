@@ -16,6 +16,7 @@ export class LoginComponent {
   });
 
   loading = false;
+  showPassword = false;
   errorMessage = '';
 
   constructor(private fb: FormBuilder, private auth: AuthService, private router: Router) {}
@@ -26,6 +27,10 @@ export class LoginComponent {
 
   get password() {
     return this.form.controls.password;
+  }
+
+  togglePassword(): void {
+    this.showPassword = !this.showPassword;
   }
 
   submit(): void {

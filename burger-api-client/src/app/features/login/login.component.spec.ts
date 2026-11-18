@@ -119,4 +119,28 @@ describe('LoginComponent', () => {
 
     expect(login).toHaveBeenCalled();
   });
+    it('permite mostrar y ocultar la contraseña', () => {
+    const input = root.querySelector('#password') as HTMLInputElement;
+    const toggle = root.querySelector('.input-group__toggle') as HTMLButtonElement;
+
+    expect(input.type).toBe('password');
+    expect(toggle.textContent).toContain('Mostrar');
+
+    toggle.click();
+    fixture.detectChanges();
+    expect(input.type).toBe('text');
+    expect(toggle.textContent).toContain('Ocultar');
+
+    toggle.click();
+    fixture.detectChanges();
+    expect(input.type).toBe('password');
+  });
+
+  it('marca los campos inválidos para lectores de pantalla', () => {
+    component.submit();
+    fixture.detectChanges();
+
+    expect(root.querySelector('#email')?.getAttribute('aria-invalid')).toBe('true');
+    expect(root.querySelector('#password')?.getAttribute('aria-invalid')).toBe('true');
+  });
 });
