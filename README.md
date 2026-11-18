@@ -8,10 +8,10 @@ Aplicación web para gestionar los pedidos de una hamburguesería: el mesero tom
 ![Login](docs/capturas/login.png)
 
 ### Vista de Mesero
-![Mesero](docs/capturas/mesero_mobile.png)
+![Mesero](docs/capturas/mesero.png)
 
 ### Vista de Cocina
-![Cocina](docs/capturas/cocina_mobile.png)
+![Cocina](docs/capturas/cocina.png)
 
 ### Vista de Administrador
 ![Administrador](docs/capturas/admin_ab.png)
