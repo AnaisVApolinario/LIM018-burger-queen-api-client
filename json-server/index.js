@@ -4,8 +4,7 @@ const server = jsonServer.create();
 const router = jsonServer.router("db.json");
 const middlewares = jsonServer.defaults();
 
-const PORT = 3000;
-
+const PORT = process.env.PORT || 3000;
 const SECRET = process.env.TOKEN_SECRET || "amero-burger-secreto-de-desarrollo";
 
 const sign = (userId) =>
